@@ -1,0 +1,33 @@
+snippet func "function (fun)"
+function ${1:name} (${2:args}){
+	${VISUAL}$0
+}
+endsnippet
+
+snippet iife "Immediately-Invoked Function Expression (iife)" w
+(function(${1:global}) {
+	${VISUAL}$0
+ })(${2:$1})
+endsnippet
+
+snippet if "if (condition) { ... }"
+if (${1:true}) {
+	$(visual)$0
+}
+endsnippet
+
+snippet else "if (condition) { ... } else { ... }"
+if (${1:false}) {	
+	$0
+} else {
+	${VISUAL}$1
+}
+endsnippet 
+
+snippet ife(lse) "if (condition) { ... }"
+if (${1:true}) {
+	$(visual)$0
+} else {
+	$2
+}
+endsnippet
