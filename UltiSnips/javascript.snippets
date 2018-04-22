@@ -1,33 +1,107 @@
 snippet func "function (fun)"
 function ${1:name} (${2:args}){
-	${VISUAL}$0
+  ${VISUAL}$0
 }
 endsnippet
 
+# Flow Control
 snippet iife "Immediately-Invoked Function Expression (iife)" w
 (function(${1:global}) {
-	${VISUAL}$0
- })(${2:$1})
+ ${VISUAL}$0
+})(${2:$1})
 endsnippet
 
 snippet if "if (condition) { ... }"
 if (${1:true}) {
-	${VISUAL}$0
+  ${VISUAL}$0
 }
 endsnippet
 
 snippet else "if (condition) { ... } else { ... }"
 if (${1:false}) {	
-	$0
+  $0
 } else {
-	${VISUAL}$1
+  ${VISUAL}
 }
 endsnippet 
 
-snippet ife(lse) "if (condition) { ... }"
+snippet ife "if (condition) { ... }"
 if (${1:true}) {
-	${VISUAL}$0
+  ${VISUAL}$0
 } else {
-	$2
+  $2
 }
+endsnippet
+
+snippet floop
+for (let ${1:i} = ${2:0}; $1 < ${3:iterable}${4:.length}; $1++) {
+  ${5}
+}
+endsnippet
+
+snippet fof
+for (let ${1:key} of ${2:iterable}) {
+  ${0}
+}
+endsnippet
+
+snippet tc "try {...} catch(e) {...}" b
+try {
+  ${VISUAL}$0
+} catch (${1:e}) {
+  ${2}
+}
+endsnippet
+
+snippet tf "try {...} finally {}" b
+try {
+  ${VISUAL}$0
+} finally {
+  $1
+}
+endsnippet
+# end Flow Control
+
+# Functions
+snippet af "arrow function"
+${1:(arguments)} => ${2:statement}
+endsnippet
+
+snippet afb "arrow function with body"
+${1:(arguments)} => {
+  $0
+}
+endsnippet
+# end Functions
+
+# Promise
+snippet p "new Promise" w
+new Promise((resolve, reject) => {
+  ${VISUAL}$0
+  })
+endsnippet
+# end Promise
+
+
+# ES6 modules
+snippet imp "module import" bw
+import ${1:*} from '${2:module}'
+endsnippet
+# end ES6 modules
+
+
+snippet st "setTimeout" w
+setTimeout(()=>{
+  $0
+}, $1)
+endsnippet
+
+snippet si "setInterval" w
+setInterval(()=>{
+  $0
+}, $1)
+endsnippet
+
+snippet cl "console.log" w
+console.log($0)
 endsnippet
