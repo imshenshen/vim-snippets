@@ -1,4 +1,4 @@
-snippet func "function (fun)"
+snippet func "function (fun)" i
 function ${1:name} (${2:args}){
   ${VISUAL}$0
 }
@@ -63,11 +63,11 @@ endsnippet
 # end Flow Control
 
 # Functions
-snippet af "arrow function"
+snippet af "arrow function" i
 ${1:(arguments)} => ${2:statement}
 endsnippet
 
-snippet afb "arrow function with body"
+snippet afb "arrow function with body" i
 ${1:(arguments)} => {
   $0
 }
@@ -75,7 +75,7 @@ endsnippet
 # end Functions
 
 # Promise
-snippet p "new Promise" w
+snippet p "new Promise" i
 new Promise((resolve, reject) => {
   ${VISUAL}$0
   })
@@ -90,13 +90,13 @@ endsnippet
 # end ES6 modules
 
 
-snippet st "setTimeout" w
+snippet st "setTimeout" i
 setTimeout(()=>{
   $0
 }, $1)
 endsnippet
 
-snippet si "setInterval" w
+snippet si "setInterval" i
 setInterval(()=>{
   $0
 }, $1)
